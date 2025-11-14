@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.calculator {
+    background: #222;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    width: 340px;
+}
+
+.display {
+    background: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.previous-operand {
+    color: #888;
+    font-size: 18px;
+    min-height: 25px;
+}
+
+.current-operand {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    background: #505050;
+    color: #fff;
+}
+
+.btn-number:hover {
+    background: #606060;
+}
+
+.btn-operator {
+    background: #ff9500;
+    color: #fff;
+}
+
+.btn-operator:hover {
+    background: #ffb143;
+}
+
+.btn-clear {
+    background: #d4d4d2;
+    color: #000;
+    grid-column: span 2;
+}
+
+.btn-clear:hover {
+    background: #e0e0e0;
+}
+
+.btn-delete {
+    background: #d4d4d2;
+    color: #000;
+}
+
+.btn-delete:hover {
+    background: #e0e0e0;
+}
+
+.btn-equals {
+    background: #4caf50;
+    color: #fff;
+    grid-row: span 2;
+}
+
+.btn-equals:hover {
+    background: #66bb6a;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 20px;
+    }
+    
+    .current-operand {
+        font-size: 28px;
+    }
+}
